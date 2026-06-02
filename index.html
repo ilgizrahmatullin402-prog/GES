@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Планировщик задачи</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-label="Планировщик задачи">
+        <aside class="task-panel">
+          <div class="brand-row">
+            <div class="brand-mark" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div>
+              <p class="eyebrow">мини-приложение</p>
+              <h1>Планировщик задачи</h1>
+            </div>
+          </div>
+
+          <label class="field-label" for="taskInput">Большая задача</label>
+          <textarea
+            id="taskInput"
+            rows="8"
+            placeholder="Например: подготовить запуск онлайн-курса, собрать портфолио, организовать переезд..."
+          ></textarea>
+
+          <div class="actions">
+            <button class="primary-button" id="buildPlanButton" type="button">
+              Разбить на этапы
+            </button>
+            <button class="icon-button" id="clearButton" type="button" title="Очистить">
+              <span aria-hidden="true">×</span>
+              <span class="sr-only">Очистить</span>
+            </button>
+          </div>
+
+          <div class="examples-block">
+            <p class="field-label">Примеры</p>
+            <div class="example-list" id="exampleList"></div>
+          </div>
+        </aside>
+
+        <section class="plan-panel">
+          <div class="plan-toolbar">
+            <div>
+              <p class="eyebrow">черновик плана</p>
+              <h2 id="planTitle">Разбор задачи</h2>
+            </div>
+            <button class="secondary-button" id="copyButton" type="button">
+              Скопировать
+            </button>
+          </div>
+
+          <div class="progress-strip" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="plan-grid" id="planGrid"></div>
+          <p class="status-line" id="statusLine" role="status"></p>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
