@@ -29,4 +29,3 @@ http://localhost:4173
 ```bash
 npm test
 ```
-# GES
