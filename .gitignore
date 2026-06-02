@@ -1,0 +1,7 @@
+server.log
+server.err.log
+task-planner-*.png
+node_modules/
+.tools/
+.DS_Store
+Thumbs.db
